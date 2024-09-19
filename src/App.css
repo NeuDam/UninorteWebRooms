@@ -1,0 +1,51 @@
+.header{
+  background-color: #644bb993;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8em;
+}
+
+.header h1{
+  text-align: center;
+}
+
+main{
+  width: 70%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5em;
+  margin-bottom: 40px;
+}
+
+h2{
+  margin: 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background-color: rgb(136, 92, 255);
+  border-radius: 5px;
+}
+
+.block{
+  width: 300px;
+  background-color: rgba(136, 92, 255, 0.048);
+  padding: .6em;
+  border-radius: 8px;
+  height: 300px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #644bb9 #242525;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.room p{
+  letter-spacing: 1px;
+}
+
+.amount-av{
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
