@@ -14,8 +14,8 @@ function HandlerInformation({data})  {
         <div className='rooms'>
           {data[block].map((room, index) => (
             <div key={index} className='room'>
-              <p>{room}</p>
-            
+              <p>{room.room}</p>
+              <p className={room.duration.includes('1') ? 'red-indicator-hour' : 'green-indicator-hour'}>{room.duration}</p>
             </div>
           ))}
           </div>
