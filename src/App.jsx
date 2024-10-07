@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react'
 import './App.css'
+import Loader from './Loader'
 
 
 function HandlerInformation({data})  {
@@ -41,7 +42,6 @@ function App() {
     const response = await fetch('https://uninorte-room-backend.vercel.app/get_rooms', {method: 'POST', headers: {'Content-Type': 'application/json'},body: JSON.stringify({day: dayName, current_time: timeString})})
     const data = await response.json()
     setMainData(data)
-
   }
 
   useEffect(() => {
@@ -51,12 +51,25 @@ function App() {
   return (
     <>
       <header className='header'>
-        <h1>Salones Libres Uninorte</h1>
+        <h1>Free Rooms Uninorte</h1>
       </header>
-      <span className='amount-av'>Disponibles: <b>{mainData?.amount}</b></span>
-      <main>
-        {mainData && <HandlerInformation data={mainData.data}/>}
-      </main>
+      {
+        new Date().toLocaleDateString('en-US', {weekday: 'long'}) !== 'Sunday' | 'Saturday' ? <div className="sign">
+        <span>No Working</span>
+        <span>Today</span>
+      </div> :  
+        <>
+          {
+            !mainData ? <Loader/> : <>
+              <span className='amount-av'>Disponibles: <b>{mainData?.amount}</b></span>
+              <main>
+                {mainData && <HandlerInformation data={mainData.data}/>}
+              </main>
+            </>
+          }
+        </>
+      }
+      
     </>
   )
 }
