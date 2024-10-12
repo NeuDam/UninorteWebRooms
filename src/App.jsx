@@ -54,7 +54,7 @@ function App() {
         <h1>Free Rooms Uninorte</h1>
       </header>
       {
-       new Date().toLocaleDateString('en-US', { weekday: 'long' }) === 'Sunday' ||  new Date().toLocaleDateString('en-US', { weekday: 'long' }) === 'Saturday') ? 
+       new Date().toLocaleDateString('en-US', { weekday: 'long' }) === 'Sunday' ||  new Date().toLocaleDateString('en-US', { weekday: 'long' }) === 'Saturday' ? 
         <div className="sign">
         <span>No Working</span>
         <span>Today</span>
