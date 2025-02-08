@@ -84,7 +84,7 @@ function App() {
           <h1>Uninorte Salones</h1>
           <span>
             Encuentra salones disponibles en todos los bloques del campus{" "}
-            <a href="https://www.uninorte.edu.co/" target="_blank">
+            <a href="#">
               Uninorte
             </a>
           </span>
