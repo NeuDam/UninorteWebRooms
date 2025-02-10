@@ -105,7 +105,7 @@ function App() {
         </div>
       </header>
       <section>
-        <h2 className="subtitle">Salones disponibles ({mainData.amount})</h2>
+        <h2 className="subtitle">Salones disponibles ({mainData?.amount || "0"})</h2>
         <main>{mainData && <HandlerInformation data={mainData.data} />}</main>
       </section>
     </>
