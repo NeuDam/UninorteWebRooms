@@ -79,6 +79,7 @@ function App() {
         <img
           src="https://i.imgur.com/nneZV6M.gif"
           className="image-background"
+          alt="Backgound"
         />
         <div className="main-info-header">
           <h1>Uninorte Salones</h1>
@@ -97,13 +98,14 @@ function App() {
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
                 className="icon-sm"
+                alt="Github Icon"
               />
             </a>
           </div>
         </div>
       </header>
       <section>
-        <h2 className="subtitle">Salones disponibles</h2>
+        <h2 className="subtitle">Salones disponibles ({mainData.amount})</h2>
         <main>{mainData && <HandlerInformation data={mainData.data} />}</main>
       </section>
     </>
